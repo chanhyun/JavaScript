@@ -8,7 +8,8 @@
 	function Testing()
 	{
 		var start=1;
-
+			var NumberofGugu=0;
+			NumberofGugu = CheckNum(NumberofGugu);
 			for(i=1;i<=9;++i)
 		{
 			for(var j=1;j<=9;++j)
@@ -26,16 +27,39 @@
 		
 		
 		var i =0;
+				
+				for(var j=1;j<=9;++j)
+				{
+					
+					var result= NumberofGugu*j;
+					document.write("             ");
+					document.write(NumberofGugu);
+					document.write("*");
+					document.write(j);
+					document.write("=");
+					document.write(result);
+
+				}
+				/*
+				var str = "" ;
+			str += num + "*" + i + " = " + (num*i) + "\n"*/
+			
+		}
+
+	function CheckNum()
+	{
+		
 		while(true)
 		{
-			var NumberofGugu=prompt("Input Number : ");
+			var NumberofGugu=prompt("input Num");
 			if(!isNaN(NumberofGugu))
 			{
+				
 				if(NumberofGugu>=1 && NumberofGugu<=9)
 				{
 
 					alert("숫자 입니다.");
-					break;
+					return NumberofGugu;
 				}
 				else
 				{
@@ -51,22 +75,7 @@
 
 		}
 		
-				for(var j=1;j<=9;++j)
-				{
-					
-					var result= NumberofGugu*j;
-					document.write("             ");
-					document.write(NumberofGugu);
-					document.write("*");
-					document.write(j);
-					document.write("=");
-					document.write(result);
-
-				}
-			
-		}
-		
-	
+	}
 
 
 	</script>
