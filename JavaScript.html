@@ -1,0 +1,89 @@
+<!doctype=html>
+<html>
+<head>
+
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+	function Testing()
+	{
+		var start=1;
+
+			for(i=1;i<=9;++i)
+		{
+			for(var j=1;j<=9;++j)
+			{
+				result = i*j;
+				document.write(i);
+				document.write("*");
+				document.writeln(j);
+				document.write("=");
+				document.writeln(result);
+				
+				document.writeln("\n <br> ");
+			}
+		}
+		
+		
+		var i =0;
+		while(true)
+		{
+			var NumberofGugu=prompt("Input Number : ");
+			if(!isNaN(NumberofGugu))
+			{
+				if(NumberofGugu>=1 && NumberofGugu<=9)
+				{
+
+					alert("숫자 입니다.");
+					break;
+				}
+				else
+				{
+					alert("숫자이지만 범위값 초과.");
+				}
+				
+			}
+
+			else
+			{
+				alert("숫자가 아니니 다시 입력");
+			}
+
+		}
+		
+				for(var j=1;j<=9;++j)
+				{
+					
+					var result= NumberofGugu*j;
+					document.write("             ");
+					document.write(NumberofGugu);
+					document.write("*");
+					document.write(j);
+					document.write("=");
+					document.write(result);
+
+				}
+			
+		}
+		
+	
+
+
+	</script>
+
+</head>
+
+	<body >
+		<button onclick="Testing(); return false"> Output GuGu Dan </button>
+		
+
+
+
+		
+
+	</body>
+
+
+
+
+</html>
