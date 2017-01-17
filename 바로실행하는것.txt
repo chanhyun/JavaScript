@@ -1,0 +1,47 @@
+<!doctype=html>
+<html>
+<head>
+
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+	function Testing(a,b)
+	{
+		console.log(a + " "+ b );
+		switch(a)
+		{
+			case 10:
+			console.log("result 10");
+			break;
+
+			case 20:
+			console.log("result 20");
+			break;
+			
+			default:
+			console.log("Nothing Matching");
+			break;
+		}
+	}
+
+
+
+
+	</script>
+
+</head>
+
+	<body onload="Testing(100)">
+		
+		
+
+
+
+		
+
+	</body>
+
+
+
+
+</html>

@@ -1,0 +1,136 @@
+head = 선언하는부분 
+
+body = 실제 태그가 나오는 부분 
+-> 화면에 나오는 모든 부분은 바디의 내용들.
+
+<br/> 
+-> enter 기능 
+
+<a> -  </a> : 열고   닫기
+
+<a/> 자체적으로 닫기
+
+<p> </p> enter기능
+항상 블록이란 개념으로 나타난다. 
+
+안녕하세요 우클릭 검사
+
+
+
+border 테두리간격 
+바깥쪽 여백 
+
+padding은 안쪽 여백 
+
+<div> 이것또한 p와 같음  but 마진없음 
+그러나 <span></span> 과는 다르게 끊어서사용할경우 엔터가 적용됨
+
+h1 굵기,크기 최대(?)
+em = 폰트 사이즈 
+
+(예시)
+<h1 style="margin: 0px;"> Hello World 입니다. </h1>
+<p style="border: 1px;"> 안녕하세요? </p>
+
+style 주석 c언어랑 같은 / **/ 
+
+html 주석은
+시작: <!-- 
+끝:  -->
+
+	<form method="get" action="http://naver.com">
+			<input type="text" name="name1" />
+			<input type="password" name="pass" />
+			<button>난 버튼  </button>
+		</form>	
+
+action 은 연결 url 
+http::/naver.com?name=1&pass=123 //이건 다 보이게됨 정보가 
+-> GET방식= 보안에 취약합니다. 
+
+HOST 방식  <form method="post" action= "http://naver.com">
+-> http://naver.com 으로 끝남. 
+
+
+ul,li,div
+
+map,img,a,span
+
+
+si, sm 
+system integration 시스템통합구축
+
+
+<input type="checkbox" name="chckbox"/>
+			체크1
+			<br/>
+			<input type="radio" name="rdo"/>
+			라디오1
+			<input type="radio" name="rdo"/>
+			라디오2
+			<input type="radio" name="rdo"/>
+			라디오3
+
+이 name 이란 속성에 같은 이름을 갖는애들은 같은 그룹이다. 
+라디오는 복수중 단일선택
+체크박스는 복수중 복수선택가능ㄴ
+
+
+https 는 모든 데이터가 암호화되서 전송시킨다.
+보안적으로 강한 서버. 
+
+
+pg 이 기종간의 연결을위해 붙여야함. 
+<input type="hidden" name="hi" value="히든값"> 을 그래서쓴다.
+
+
+javascript 자체는 보안에 취약합니다. 
+----------------------------
+html4 
+
+html5 gps,지도위치, 알림기능 
+<!DOCTYPE html>
+<b > bold
+<u> underline
+<i> 기울기
+<del> 글자가운데 줄 긋기 
+<mark > 색강조
+H<sub> a</sub> a를 H오른쪽아래(로그함수생각하면됨)
+<sup>은 지수 형식 
+
+&nbsp;//공백특수문자
+ &lt; &gt <꺽쇠괄호>;
+lower than greater than 
+<marquee> 오른쪽에서 왼쪽으로 흘러가는 애니메이션 
+----------------------------------------
+ .hhh /* class를 만든거 */
+			 	{
+			 		font-weight: 10px;
+			 		color: green;
+			 		margin: 20px 10 5 30px;
+			 	}
+그리고 margin 은 시계방향으로 top right bottom left 임.
+
+
+<ol>
+		<li> 항목1</li>
+		<li>항목2 </li>
+		<li>항목3 </li>
+	</ol>
+
+출력: 1. 항목1
+     2. 항목2
+
+
+	<ul>
+		<li> 항목 1-1 </li>
+		<li> 항목 1-2 </li>
+		<li> 항목 1-2 </li>
+	</ul>
+
+출력: o.항목1 
+      o.항목2
+
+png = 용량이 큰대신 투명하게 될수있음
+
+jpeg = 압축파일로 용량이 작으나 투명하게 안됨 .

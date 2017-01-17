@@ -1,0 +1,28 @@
+<html>
+	<head>
+	<title> we are studying now </title> <!-- 이름 변경 -->
+		<style type="text/css">
+		a
+		{
+			text-decoration: none;
+			color: purple;
+			cursor: wait;
+
+		}
+		</style>
+		<script type="text/javascript"> /* 자바스크립트영역 */
+			alert("It is alert");
+		</script>
+	</head>
+
+
+</html>
+
+
+----------
+
+console.log("Console Test");
+				console.log(a+", "+ b+ ", "+ c+","+d);
+
+
+인터넷사이트, html에서 console로 보기 

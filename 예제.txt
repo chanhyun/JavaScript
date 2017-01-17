@@ -1,0 +1,45 @@
+<!DOCTYPE= html>
+<html>
+	<head>
+	<title> we are studying now </title> <!-- 이름 변경 -->
+		<style type="text/css">
+		a
+		{
+			text-decoration: none;
+			color: purple;
+			cursor: wait;
+
+		}
+		</style>
+		<script type="text/javascript"> 
+			function test() 
+			{
+				/*
+				var yourName= prompt("what is your name");
+				alert(yourName);
+				*/
+				document.write("I'm Beginner of javascript<br/><br/> hahaha");
+				var aa="hello";
+				var b= 100;
+				var c=10.1;
+				var d= false;
+			}
+		</script>
+	</head>
+
+
+
+	<body>
+			
+			<button onclick="test()"> Output your name </button>
+			<a href="http://www.naver.com" target="_blank">네이버로 이동 </a>
+
+
+
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+			<iframe  width="560" height="315" src="https://www.youtube.com/embed/A46JB96Rjl8" frameborder="0" allowfullscreen></iframe> 
+
+	</body>
+
+</html>

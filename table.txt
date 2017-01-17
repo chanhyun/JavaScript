@@ -1,0 +1,34 @@
+th = table head필드
+td = 열 ,속성
+tr = tree row (다음 행 )
+
+border은 줄 속성값인듯
+cellspacing = 빈칸들 조정 0 을 사용해봅시다
+align 글짜위치변경
+
+colspan="개수" 원하는 갯수의 열끼리 병합가로로 . 
+rowspan 도 이와동일 (세로로 병합)
+
+caption 제목 
+thead = title head 속성값명시
+
+<a href="http://www.naver.com"> </a> a 태그 , url 연동 네이버로 이동
+<a href="http://www.naver.com" target="_blank"> 새창띄우고 네이버로 이동 </a> 
+
+
+
+링크건것 찾기
+	<a href="#bottom" name="top"> 요아래를 보시오 </a>
+
+
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+	<a href="#top" name="bottom">뭘봐  </a>
+
+
+
+
+<a href="#"> 맨 위로 이동 </a>
+
+<iframe src="http://daum.net" width="600" height="300" />
+지정된 공간만큼 다른 사이트,혹은 html file도 보이게 해줌. 
