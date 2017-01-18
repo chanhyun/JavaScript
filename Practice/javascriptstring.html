@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style type="text/css">
+			
+	p
+	{
+		
+	}
+	.hh
+	{
+		color:purple;
+		margin: 10px 4 10 4px;
+	}
+
+
+
+	</style>
+
+
+
+
+	<script type="text/javascript">
+	
+	var arr= [];
+	function add()
+	{
+		var str=" "
+		for(var i=0;i<3;++i)
+		{
+			arr.push(prompt("주소입력 : "));
+		}
+		var div = document.getElementById("addr");
+
+		for(var i=0; i<arr.length;i++)
+		{
+				str+=arr[i]+"<br/>";
+		}
+				div.innerHTML=str;
+	};
+	function find()
+	{
+		var tmpArr = "";
+		var findstr = prompt("찾을 주소 입력: ");
+		for(var i=0;i<3;++i)
+		{
+			if((arr[i].indexOf(findstr)>=0))
+			{
+					tmpArr+=arr[i]+"\n";
+			}
+
+		}
+		if(tmpArr.length>0)
+		{
+			alert(tmpArr);
+		}
+		else
+		{
+			alert("찾고자 하는 주소 없다.");
+		}
+	};
+
+	//시분초 형식으로 반환한다. 
+
+		//alert(str);
+	//initialize()
+	
+	</script>
+
+
+
+	</head>
+
+
+
+
+
+	<body  >
+		<button onclick="add()"> 주소추가 </button>
+
+		<button onclick="find()"> 주소검색  </button>
+	
+		<div id="addr">
+
+		</div>
+
+	</body>
+
+
+
+
+</html>
