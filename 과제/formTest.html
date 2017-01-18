@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript">
+		function emailChange(val)
+		{
+			if(val === "직접입력")
+			{
+				var getEmailDirectid = document.getElementById("email2")
+				getEmailDirectid.style.display="block";
+				var selEmail  = document.getElementById("selEmail")
+				selEmail.style.display = "none";
+			}
+		};
+		function sendData() 
+		{
+			
+			var sName = document.getElementById("sName");
+			var sNameStr = sName.value;
+			if(sNameStr == null || sNameStr == '') {
+				alert("이름을 입력 하세요!");
+				sName.focus();
+				return false;
+			}
+			if(sNameStr.length <= 1) {
+				alert("이름은 한글자 이상 입력 하세요");
+				sName.focus();
+				return false;
+			}
+			var email = document.getElementById("email");
+			var emailVal = email.value;
+			if(emailVal == null || emailVal=='')
+			{
+				alert("email 입력 하시오 ");
+				email.focus();
+				return false;
+			}
+			var selEmail = document.getElementById("selEmail");
+			selEmailVal = selEmail.value;
+			if(selEmail == "")
+			{
+				alert("email input or choose plz ");
+				selEmail.focus();
+				return false; 
+			}
+			var emailstr = email.value + "@"; 
+			if(selEmailVal === "직접입력")
+			{
+				emailstr += document.getElementById("email2").value;
+			}
+			else 
+			{
+				emailstr +=selEmailVal;
+			}
+			var str = "이름: "+ sName.value+"\n";
+			str += "email: " +email.value + 
+			alert(str);
+			this.submit();
+		}
+
+	</script>
+
+</head>
+
+
+<body>
+
+<form id="form1" onsubmit="sendData(); return false;">
+
+	<table border="1">
+		<tr>
+			<th>이름</th>
+			<td>
+				<input type="text" id="sName" minlength="1" maxlength="20" placeholder="이름입력" autofocus="true"  />
+			</td>
+		</tr>
+		<tr>
+			<th>
+				이메일
+			</th>
+			<td>
+				<input type="text" id="email" />@
+				<select id="selEmail" onchange = "emailChange(this.value)">
+					<option value="">선택 하세요</option>
+					<option value="naver.com">naver.com</option>
+					<option value="daum.net">daum.net</option>
+					<option value="직접입력">직접입력</option>
+				</select>
+				<input type="text" id="email2" style="display:none;" />
+			</td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">
+				<input type="submit" value="회원가입" />
+			</td>
+		</tr>
+	</table>
+
+</form>
+	
+
+</body>
+
+</html>
