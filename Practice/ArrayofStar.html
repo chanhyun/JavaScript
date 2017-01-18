@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style type="text/css">
+			
+	p
+	{
+		
+	}
+	.hh
+	{
+		color:purple;
+		margin: 10px 4 10 4px;
+	}
+
+
+
+	</style>
+
+
+
+
+	<script type="text/javascript">
+	
+	//시분초 형식으로 반환한다. 
+
+		//alert(str);
+	//initialize()
+		var ROW = 7;
+		var COL = 7;
+		var halfrow = parseInt(ROW/2);
+		var halfcol = parseInt(COL/2);
+		var  a = new Array(ROW);
+		var count=0;
+		//middle = parseInt(ROW/2);
+		for(i=0;i<ROW;++i)
+		{
+			 a[i] = new Array(ROW);
+			for(var j=0;j<COL;++j)
+				{
+					a[i][j] = "0";
+				}
+		}
+
+//////////////////////////Algorithm
+		
+	for(i=0;i<ROW;++i)
+	{
+		for(j=0;j<COL;++j)
+		{
+			if(i==0)
+			{
+				a[i][halfcol]="*";
+
+			}
+			if(i>1)
+			{
+				result=halfcol-1;
+				a[i][result-1]="*";
+				for(k=result; ;)
+				{
+					a[i][k]="*";
+					k+=2;
+					if(k>halfcol)
+						break;
+				}
+			}
+		}
+	}
+
+
+////////////////////////
+		//output 
+		for(i=0;i<ROW;++i)
+		{
+			for(j=0;j<COL;++j)
+			{
+				document.write(a[i][j]);
+			}
+			document.writeln("<br/>");
+		}
+		document.write(green);
+
+	</script>
+
+
+
+	</head>
+
+
+
+
+
+	<body  >
+		
+	</body>
+
+
+
+
+</html>

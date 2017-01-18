@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style type="text/css">
+			
+	p
+	{
+		
+	}
+	.hh
+	{
+		color:purple;
+		margin: 10px 4 10 4px;
+	}
+
+
+
+	</style>
+
+
+
+
+	<script type="text/javascript">
+	
+	//시분초 형식으로 반환한다. 
+
+		//alert(str);
+	//initialize()
+		var i=0;
+		var ROW = 5;
+		var COL = 5;
+		var halfrow = parseInt(ROW/2);0
+		var halfcol = parseInt(COL/2);
+		var  a = new Array(ROW);
+		var middle = 0;
+		//middle = parseInt(ROW/2);
+		for(i=0;i<ROW;++i)
+		{
+			 a[i] = new Array(ROW);
+			for(var j=0;j<COL;++j)
+				{
+					a[i][j] = "0";
+				}
+		}
+
+//////////////////////////Algorithm
+
+		for(i=0;i<ROW;++i)
+		{
+			for(j=0;j<COL;++j)
+			{
+				a[i][j]+= "  ";
+				if(i==0)
+				{
+						a[i][halfcol]="*"+ "  ";
+				}
+				if(i<halfrow &&(i%2==1 && j%2==1))
+				{
+					a[i][j]="*"+" ";
+				}
+
+				if(i==halfrow && j%2==0)
+				{
+					a[i][j]="*"+" ";
+				}
+
+				if(i>halfrow && i%2==1 && j%2==1)
+				{
+						a[i][j]="*"+" ";
+				}
+				if(i==a.length-1)
+				{
+					a[i][halfrow]="*"+ "  ";
+				}
+			}
+		}
+
+
+
+
+////////////////////////
+		//output 
+		for(i=0;i<ROW;++i)
+		{
+			for(j=0;j<COL;++j)
+			{
+				document.write(a[i][j]);
+			}
+			document.writeln("<br/>");
+		}
+
+	</script>
+
+
+
+	</head>
+
+
+
+
+
+	<body  >
+		
+	</body>
+
+
+
+
+</html>
