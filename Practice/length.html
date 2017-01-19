@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	function OnkeyPress(v)
+	{
+		
+		var txtcheck=document.getElementById("txaman");
+		var txtlen = document.getElementById("txtLen");
+		if(txtcheck.value.length>100)
+		{
+				txtcheck.value=txtcheck.value.substring(0,99);
+		}
+		else
+		{
+			txtLen.innerHTML=txtcheck.value.length;
+		}
+		if(v.keyCode==8)
+		{
+		
+			txtLen.innerHTML=txtcheck.value.length-1;
+		}
+		
+	};
+	</script>
+</head>
+<body>
+
+	<textarea onkeypress="OnkeyPress(this.value)" rows="20" cols="20" id="txaman"></textarea>
+	<br/>
+	<div> <span id="txtLen">0</span> / 100</div>
+	
+</body>
+</html>
