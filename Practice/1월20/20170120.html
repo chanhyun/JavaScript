@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	*
+	{
+		
+	}
+	
+	#wrap
+	{
+		width:300px;
+		height:200px;
+		background-color: #ccc;
+		/*position:relative;*/
+		top:50px;margin:0 auto;
+	}
+	#box
+	{
+		width:50px;
+		height:50px;
+		background-color:aqua;
+		position: absolute;
+		top:100px;
+		left:100px
+	}
+	</style>
+	<title>Insert title here</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.12.4.js">
+	
+	</script>
+	
+	
+	
+	<script type="text/javascript">
+		$(function()
+		{
+			var top1=$("#box").position().top;
+			$("#t1").text(top1);
+			
+			var top2=$("#box").offset().top;
+			$("#t2").text(top2);
+		})
+		
+	</script>
+	
+</head>
+<body>
+	<p id="t1"> </p>
+	<p id = "t2"> </p>
+	<div id="wrap">
+		<p id="box">box1</p>
+	</div>
+</body>
+</html>

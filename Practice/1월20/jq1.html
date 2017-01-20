@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+		#hw { 
+			background-color: red;
+		}
+
+		.hj {
+			background-color: blue;
+		}		
+	</style>
+	
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			/* $("#hw").html( "안녕하세요? HW 바꿈" );
+			
+			$(".hj").html( "반갑습니다. HJ 바꿈" );
+			$("#txt").val("입력하세욤!");
+			
+			$("div, span").html("test");
+			
+			$("*").css("border", "1px solid blue")
+			.css("font-size", "30px"); */
+			
+			//$("#wrap > p").css("background-color", "yellow");
+			$("#wrap").children("p")
+			.css("background-color", "yellow");
+			
+			
+			$("#m li").each(function(i, k) {
+				$(k).text("리스트" + i);
+			});
+			
+////////////////////////////////////////////////////////////////
+			$("#btn1").click(function() {
+				alert("btn1 이 눌러졌습니다.");
+			});
+			
+			$("#btn2").on("click", function() {
+			
+				$("#divImg").append
+				( '<img id="imgTest" src="../img/a.jpg"/>' );
+			});
+			
+			//이미지의 이벤트
+			$(document).on("click","#imgTest", function() {
+				alert("imgTest 클릭됨");
+				
+			});
+			
+		});//end ready
+		
+		
+	</script>
+</head>
+<body>
+	
+	<div id="hw">
+		Hello World
+	</div>
+	<div class="hj">
+		Hello JQuery
+	</div>
+	<input type="text" id="txt">
+	
+	<div id="wrap">
+		<p>안녕 나는 P1 이야</p>
+		<p>안녕 나는 P2 야 </p>
+		<span>나는 span 이야</span>
+	</div>
+	
+	<ul id="m">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+	</ul>
+	
+	<button type="button" id="btn1">버튼1</button>
+	<button type="button" id="btn2">버튼2</button>
+	<br/>
+	
+	<div id="divImg">
+		<img id="imgTest" src="../img/a.jpg"/>
+	</div>
+	
+	
+	
+</body>
+</html>

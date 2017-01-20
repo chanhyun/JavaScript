@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"> </script>
+	<script type="text/javascript"> 
+	//
+	$(function() 
+	{
+		
+	})
+	function start()
+	{
+		$("#naya").stop();
+	}
+	function stopAni()
+	{
+		$("#naya").stop();
+	}
+	$(document).ready(function()
+	{
+		//스크롤 이벤트 
+		/*
+		$("#naya").hide(2000,function() //2초동안 사라지는 애니메이션 보여줌 0이면 바로 없어짐 
+		{
+				alert("hide success");
+		})
+
+			접었다 폈다 하기 
+ 		$("#naya").slideUp(2000);//접기
+ 		$("#naya").slideDown(2000);//펴기
+		$("#naya").slideToggle(2000); //자동 접었다 펴기 	펴져있으면 접기 , 접혀있으면 펴기 
+		$("#naya").slideToggle(2000);
+		*/
+		
+		
+		//오른쪽으로이동
+// 		$("#naya").animate
+// 		(
+// 		{
+// 			//marginLeft:"250px"
+// 		},5000,function(){alert("도착완료 ")} // 이동 5초동안 
+	
+// 		);
+		
+		//$("#naya").finish();//애니메이션 없이 결과만 보여주는 함수 
+		
+		
+		
+		$(window).scroll(function()
+		{
+			var sct = $(window).scrollTop();
+			console.log(sct);
+			
+			//$("#naya").offset({top: sct}); // top 에다가 대입하는것.
+// 			  $("#naya").stop().slideDown(function(){
+				
+// 			  $(this).offset({top:sct});
+		$("#naya").stop().animate({top:sct},1000);//숫자는 시간이다,스크롤할때 따라내려오고 올라오기 
+// 			}) ;
+ 		})
+			
+	}) //end ready
+	</script>
+	
+</head>
+<body style="height: 5000px;">
+	<button type = "button" onclick="stopAni()">Start</button>
+	<button type = "button" onclick="start()">Stop</button>
+	<div id="naya" style="background-color: red;height:100px; width:100px; position: absolute; margin-top:100px;"><!--  absolute 절대치  --> 
+		
+	</div>
+</body>
+</html>
