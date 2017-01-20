@@ -1,0 +1,86 @@
+<!-- Jquery Swiper 적용해보기 
+http://idangero.us/swiper/get-started/#.WIGcKlWLSUk
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="UTF-8">
+ 	<title>Swiper</title>
+ 
+ 	<link href="../js/swiper/css/swiper.css" rel="stylesheet" />
+ 	<link href="../js/flipclock/css/flipclock.css" rel="stylesheet"/>
+ 	<style type="text/css">
+  	.swiper-container {
+      width: 300px;
+      height: 200px;
+ 	 }      
+ 	 .your-clock
+ 	 {
+ 	 	 width: 700px;
+      	height: 200px;
+ 	 }
+	 </style>
+	
+	<!-- Jquery -->
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	
+	<!-- swiper -->
+	<script type="text/javascript" src="../js/swiper/js/swiper.js"></script>
+	<script type="text/javascript" src="../js/flipclock/js/flipclock.js"></script>
+	
+	
+	<script type="text/javascript" src="../js/flipclock/js/flipclock.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var clock = $('.your-clock').FlipClock({
+				clockFace: 'TwelveHourClock',
+				countdown:false
+				
+			});
+		})
+	</script>
+</head>
+<body>
+ 
+ <div class="your-clock"> </div>
+ <!-- 3. Add Swiper HTML Layout -->
+ <!-- Slider main container -->
+ 
+ <div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+   <!-- Slides -->
+   <div class="swiper-slide"><img src="../img/mountain.jpg"></div>
+   <div class="swiper-slide"><img src="../img/landscape.jpg"></div>
+   <div class="swiper-slide"><img src="../img/SnowMountain.jpg"></div>
+  
+  </div>
+  
+  <!-- If we need pagination : 페이지번호 -->
+  <div class="swiper-pagination"></div>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+  
+ </div>
+ <!-- 5. Initialize Swiper - 첫번째꺼 : script지만 body에 둔대 -->
+
+ 
+</body>
+</html>
+ <script>
+  var mySwiper = new Swiper('.swiper-container', {
+   // Optional parameters
+   loop : true,
+ 
+   // If we need pagination
+   pagination : '.swiper-pagination',
+ 
+   // Navigation arrows
+   nextButton : '.swiper-button-next',
+   prevButton : '.swiper-button-prev',
+  })
+ </script>
+ 

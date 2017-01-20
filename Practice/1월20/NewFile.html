@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+
+		#hw 
+		{	
+			background-color: red;
+		}
+		
+		.hj{ background-color: blue;}
+	</style>
+	
+<script type="text/javascript" src="../js/jquery-1.12.4.js">
+	//body 에 다 올라왔을때 출력을 해주는 겁니다. 
+	//document.ready 는 시작하기 위한  기본형..? 이라고 생각하면 됨 jquery 는 
+	</script>
+	
+	<script type="text/javascript">
+	
+	$(document).ready(function()
+	{
+// 		$("#hw").val("안녕하세요? HW 바꿈"); 
+// 		$(".hj").val("반갑다. HJ 바꿈");
+// 		$("#txt").val("입력하세요");
+// 		$("div, span").html("test");
+		$("#wrap > p").css('background-color','blue');//자식요소에게보낸다.
+		$("#wrap").children("span").css('background-color','yellow');//똑같다,공백이면 전체 자식 
+		$("#wr> li").css("border","1px solid red");
+		$("#m li").each(function(i,k)
+		{ //i는 index,k는 index의 객체 this인 요소 두개가 들어온다. 배열형식으로 세번나옴. 
+			$(k).text("리스트"+ i);
+		})
+		$("#btn1").click(function()
+		{
+			alert("btn1이눌림");
+		})
+				
+		$("#btn2").on("click",function()
+		{
+			alert("btn2이눌림")
+			$("#divImg").append('<img id="imgTest" src="../img/a.jpg"/>');
+		
+		})
+		$("#imgTest").on("click",function()
+		{
+			alert("imgtest 클릭됨");
+		});
+	});
+	$(function()
+	{
+		$("*").css("border","1px solid blue").css("font-size","30px");
+	});
+	</script>
+</head>
+<body> 
+<!--id 는 #, class 는 .으로 선언해서 써주면됨  -->
+	<div id="hw">
+		
+	</div>
+	<div class="hj">
+		
+	</div>
+	
+	<input type="text" id="txt"> 
+	<div id="wrap">
+		<p> 안녕 난 p1이야 </p>
+		<p>안녕 난 p2야 </p>
+		<span> 안녕 난 span 이야 </span>
+			
+	</div>
+	<h1>인접 관계 </h1>
+	<ul id="wr">
+		<li> 내용1
+			<ul>
+				<li>
+					내용2
+				</li>
+			</ul>
+		</li>
+	
+	</ul>
+	
+	<ul id="m">
+		<li></li>
+		<li></li>
+		<li></li>
+		
+	</ul>
+	<button type="button" id="btn1">button1 </button>
+	<button type="button" id= "btn2">button2 </button>
+	
+	<div id= "divImg">
+	<img id="imgTest" src="../img/a.jpg/">	
+	</div>
+		
+</body>
+</html>

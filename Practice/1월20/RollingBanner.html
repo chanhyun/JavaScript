@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	<!-- 기존에있는 css 불러오기 , 이 양식이 없으면 화살표가 없어짐-->
+	
+	<link href="../js/bxslider/jquery.bxslider.css" rel="stylesheet">
+	
+	 
+	<!--  Jquery -->
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"> </script>
+	
+	<!--  bxslider -->
+	<script  type="text/javascript" src="../js/bxslider/jquery.bxslider.js">
+	</script>
+	
+	<script type="text/javascript"> 
+	
+		$(function() { //사진 높이에 맞게 자동적으로 fade(사라지는) 효과로 그림이미지 바뀌어라 
+			//slide width는 창틀 ,mindslides = 최소 개수까지 나와라 화면에
+			//http://bxslider.com/examples 여러가지 효과 
+			$(".bxslider").bxSlider({auto: true,
+				autoControls:true,
+				adaptiveHeight:true,
+				mode:'fade',
+				slideWidth:1000,
+				minSlides:2,
+				//slideMargin:10
+			});
+		})
+	</script>
+
+	
+	
+</head>
+<body>
+	<ul class="bxslider">
+	 <li> <img src="../img/landscape.jpg">  	</li>
+	 <li> <img src="../img/mountain.jpg">		</li>	
+	 <li> <img src="../img/SnowMountain.jpg">   </li>
+	 <li> <img src="../img/a.jpg">   			</li>
+	</ul>
+</body>
+</html>

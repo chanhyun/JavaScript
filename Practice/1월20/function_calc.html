@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title> 내장함수 </title>
+<style type="text/css">
+   legend{position:absolute;left:-9999px;}
+   #calc{width:185px;}
+   #calc input[type=button]{
+   width:20px;border-radius:2px;
+   border:1px solid #09f;
+   }
+   #win{width:155px;border:none 0;
+   background-color:#cff;
+   }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var num="";
+	
+	
+	$(function()
+	{
+		var a=0;
+		
+		var operator1 = "";
+			$(":button").click(function()
+			{
+				var b=1;
+				var win=$("#win"); // $("#win").val(a);
+				var inputval  =$(this).val();
+				
+				//숫자면 
+				if(!isNaN(inputval)) 
+				{
+				
+					win.val(win.val()+inputval);
+					
+				}
+				else if(inputval === "+")// 
+				{
+					operator1=inputval;
+					a+=parseInt(win.val());
+					win.val("");
+				}
+				
+				else if(inputval==="-")//
+				{
+					operator1=inputval;
+					a= parseInt(win.val())-a;
+					win.val("");
+				}
+				else if(inputval==="/")// 
+				{
+					operator1=inputval;
+					a=parseInt(win.val())/(a+b);
+					win.val("");
+				}
+				else if(inputval==="*")//  
+				{
+					operator1=inputval;
+					a=parseInt(win.val())*(a+b);
+					win.val("");
+				}
+				else if(inputval==="=")// 
+				{
+					var winVal = parseInt(win.val());
+					win.val(eval(a+operator1+winVal));
+					a=0;
+					operator1="";
+				}
+				else if(inputval==="C")// c 가 눌릴때 초기화 
+				{
+					win.val("");
+					a=0;
+					b=0;
+				}
+				else
+				{
+					
+
+				}
+				
+			});	
+		
+			
+			
+			
+		});
+	
+	
+
+</script>
+</head>
+<body>
+  <form action="#" id="calc">
+   <fieldset>
+      <legend>계산기</legend>
+      <p><input type="text" name="win" id="win" readonly="readonly" disabled="disabled" /></p> <!-- disabled 선택도안된다. -->
+      <p id="btn_wrap">
+         <input type="button" value="1" />
+         <input type="button" value="2" />
+         <input type="button" value="3" />
+         <input type="button" value="4" />
+         <input type="button" value="5" />
+         <br /><br />
+
+         <input type="button" value="6" />
+         <input type="button" value="7" />
+         <input type="button" value="8" />
+         <input type="button" value="9" />
+         <input type="button" value="0" />
+         <br /><br />
+
+         <input type="button" value="/" />
+         <input type="button" value="*" />
+         <input type="button" value="-" />
+         <input type="button" value="+" />
+         <input type="button" value="=" />
+         <br /><br />
+
+         <input type="button" value="C" />
+      </p>
+   </fieldset>
+  </form>
+</body>
+</html>
